@@ -1,14 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import {Navbar} from "./Components/pages/Navbar.jsx"
+import "./App.css";
+import { AuthContextProvider } from "./Components/context/AuthContext";
+
+import Mainroutes from "./Components/Routes/MainRoutes";
 function App() {
   return (
     <div className="App">
-      
-      <Navbar />
-
+      <AuthContextProvider>
+        <Mainroutes />
+      </AuthContextProvider>
     </div>
   );
 }
-
 export default App;
